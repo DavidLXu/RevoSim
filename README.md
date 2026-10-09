@@ -152,23 +152,6 @@ finally:
 
 `world.set_joints(side, {joint_name: radians})` 控制关节目标，`world.release_object()` 解除探针驱动。`World(shape=("sphere", "cube", "polyhedron"), hand_spacing=0.20)` 创建三物体场景；`drive_object(position, object_name="cube")` 分别控制目标。多物体模式对原始压阻响应逐点取最大值，再做一次扩散；每个指尖的 RGB、Marker 和深度来自同一个接触目标。当前光学后端要求同一时刻每个指尖最多接触一个目标，重叠时会报错，不合成虚假的多目标光学图像。
 
-## 验证与建模范围
-
-```bash
-python -m pytest tests -q
-python tools/check_tip_wrench.py --headless --device cuda:0 --output outputs/tip_wrench_check.json
-python tools/validate_parallel.py outputs/parallel
-python tools/validate_recording.py outputs/demo/sphere
-python tools/validate_recording.py outputs/demo/cube
-python tools/validate_recording.py outputs/demo/polyhedron
-```
-
-验证器检查完整阶段、双手十指所有模态、全部压阻分区、原始数组形状/有限性、时间间隔以及离开接触后归零。验证器还检查抛跳前段的加速度与目标掌面落点响应，并完整解码视频以核对帧数。逐物体演示的运行证据见 `docs/validation.md`；本次并行演示及指尖六维力隔离检查见 [并行演示验证](docs/parallel_validation.md)。
-
-手模型原本是视觉资产，本项目在运行时添加碰撞和关节驱动：掌壳与指节硬壳使用 SDF，避免凸包填平凹陷；其他碰撞采用分解或凸包近似，软垫使用柔顺接触。保留源文件中已有的质量/惯性，未指定质量的固定附属 link 使用极小质量，防止引擎默认质量改变动力学。驱动参数用于演示，并非实机辨识结果；自碰撞关闭，手腕固定。
-
-压阻通道数量、顺序和切向位置保留。原资源的手指法线朝内，因此运行时翻转；埋在皮肤内的点沿法线投射到高保真软垫外表面作为采样位置。RGB 来自 Taxim，Marker 来自 HydroShear，视触觉配准是模拟资源，不代表实机标定；可视表皮仍是刚性网格，不是有限元软体变形。
-
 ## 项目结构
 
 ```text
@@ -181,14 +164,6 @@ tests/           通道契约、坐标配准、六维合力及独立性测试
 ```
 
 第三方许可和文件声明详见 `THIRD_PARTY_NOTICES.md` 及各资源目录。
-
-## 胶面参考与内部黑点修复
-
-`TactileSensorCfg.outer_surface_reference` 默认是 `True`。深度通道沿射线选择最外侧朝外的胶面交点，替代固定取第二个交点，避免内部薄结构导致参考距离错误。胶面参考在初始化时计算并缓存；运行时物体仍使用最近交点，不会每帧重新遍历胶面。
-
-`marker=True` 可以保留：marker 通道仍使用原标定和原交点规则，这个开关只改变深度胶面参考。设为 `outer_surface_reference=False` 可对比旧方法。此移植没有修改局部窗口插值、极端擦边交点步进或双环境差异问题。
-
-回归命令：`PYTHONPATH=src python -m pytest tests -q`。单元测试验证交点选择和配置路由；完整动态仿真仍需兼容的 Isaac Sim 环境。
 
 ## 引用
 
