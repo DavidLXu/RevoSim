@@ -1,9 +1,13 @@
 # RevoSim
 
-RevoSim 面向 sim-to-real，将视觉外观、关节运动学、动力学与多模态触觉集成在同一双手模型中。环绕视频展示原始材质的光泽、色彩和动力学驱动的手指运动；下方接触演示展示各触觉区域的响应。
+RevoSim 面向 sim-to-real，将视觉外观、关节运动学、动力学与多模态触觉集成在同一双手模型中。环绕手指舞展示原始材质的光泽、色彩，以及动力学驱动的逐指波浪、快速手势切换和比耶侧摆；下方接触演示展示各触觉区域的响应。
 
 <p align="center">
-  <img src="docs/images/revosim-orbit.gif" width="640" alt="RevoSim: 360-degree studio orbit of two high-fidelity hands">
+  <a href="docs/videos/revosim-orbit-60fps.mp4">
+    <img src="docs/images/revosim-orbit.gif" width="640" alt="RevoSim: dynamic finger dance with a 360-degree studio orbit">
+  </a>
+  <br>
+  <a href="docs/videos/revosim-orbit-60fps.mp4">观看手指舞视频（60 fps，15 秒）</a>
 </p>
 
 每手有 21 个转动关节、247 个压阻通道和 5 个指尖视触觉区域。接触演示中，双手掌心朝上，用户通过 Python API 或键盘控制物体，即可读取原始模拟 RGB、Marker 位移、深度、六维接触合力和压阻响应。
@@ -57,11 +61,11 @@ python examples/slide_demo.py --headless --device cuda:0 --shape sphere --fps 60
 # 可视化交互：打开 Isaac Sim 和十指触觉面板。
 python examples/interactive.py --device cuda:0 --shape sphere --output outputs/interactive
 
-# 双手适度握拳、张开、比耶并侧摆；以 1.5 倍节奏直接仿真和渲染 12 秒环绕视频。
-python examples/orbit_demo.py --headless --device cuda:0 --motion-speed 1.5 --output outputs/orbit
+# 双手错拍波浪、快速手势切换、比耶侧摆和交替弹指；直接仿真并渲染 15 秒环绕视频。
+python examples/finger_dance.py --headless --device cuda:0 --output outputs/finger-dance
 
 # 导出 30 fps 循环 GIF；可选安装 gifsicle 进一步压缩文件体积。
-python tools/make_orbit_gif.py outputs/orbit/revosim-orbit-60fps.mp4 outputs/orbit/revosim-orbit.gif
+python tools/make_orbit_gif.py outputs/finger-dance/revosim-finger-dance-60fps.mp4 outputs/finger-dance/revosim-finger-dance.gif
 ```
 
 交互按键：`W/S` 前后、`A/D` 左右、`Q/E` 上下、空格释放物体、`R` 复位到左手食指上方并重新连接驱动、`Esc` 退出。键盘控制的是连接物体的虚拟弹簧目标，物体运动与接触由 PhysX 求解。

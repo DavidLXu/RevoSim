@@ -1,8 +1,8 @@
 {
-  "frames": 720,
+  "frames": 900,
   "fps": 60,
-  "duration_s": 12.0,
-  "motion_speed": 1.5,
+  "duration_s": 15.0,
+  "motion_speed": 1.0,
   "post_render_retiming": false,
   "self_collision": false,
   "resolution": [
@@ -13,7 +13,8 @@
   "samples_per_update": 32,
   "updates_per_frame": 2,
   "orbit_degrees": 360,
-  "frame_angles": "2*pi*frame/frame_count; seamless periodic camera",
+  "camera_offset_deg": -70,
+  "frame_angles": "2*pi*frame/frame_count + radians(camera_offset_deg); seamless periodic camera",
   "orbit_center_world_m": [
     0.0,
     0.0007442680519231595,

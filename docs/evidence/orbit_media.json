@@ -5,8 +5,8 @@
       1000
     ],
     "fps": 60,
-    "frames": 720,
-    "duration_s": 12,
+    "frames": 900,
+    "duration_s": 15,
     "full_decode_passed": true
   },
   "gif": {
@@ -14,29 +14,29 @@
       640,
       400
     ],
-    "frames": 360,
-    "duration_ms": 12000,
+    "frames": 450,
+    "duration_ms": 15000,
     "loop": 0,
     "full_decode_passed": true,
     "palette": "256 colors per frame",
     "compression": "gifsicle -O3 --lossy=60",
     "fps": 30
   },
-  "unit_tests_passed": 7,
   "files": {
     "docs/videos/revosim-orbit-60fps.mp4": {
-      "bytes": 5835988,
-      "sha256": "6b04af1eccda40e3cd400701a5328e41dd1f54bd14e2327784f78900d3dbd734"
+      "bytes": 7376628,
+      "sha256": "fe732bfbd58958a43f75c7835b6607594c60e5015794ed80b8bd743d7ac83b1b"
     },
     "docs/images/revosim-orbit.gif": {
-      "bytes": 13571268,
-      "sha256": "e89a4eaa2a7809a3771c3f6a4a66352dffead496ed64042c5648dd9db9a2e204"
+      "bytes": 16976789,
+      "sha256": "f927b6e90f92022537f0965d6f4dfb20911226775a324103671fef11df2fadeb"
     }
   },
   "playback_speed": 1.0,
-  "source_duration_s": 12,
-  "motion_speed": 1.5,
-  "reference_motion_duration_s": 18,
+  "source_duration_s": 15,
+  "motion_speed": 1.0,
   "post_render_retiming": false,
-  "self_collision": false
+  "self_collision": false,
+  "example": "examples/finger_dance.py",
+  "visual_review": "Seven key poses with side/back checks, 30 final-video samples and six GIF samples"
 }

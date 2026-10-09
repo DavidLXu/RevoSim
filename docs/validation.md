@@ -79,28 +79,32 @@ explicitly assigned physical GPU 3. The startup log confirmed the intended GPU.
 This avoided creating CUDA contexts on unrelated, nearly full GPUs during
 parallel validation. Ordinary single-GPU use needs only `--device cuda:0`.
 
-## Orbit showcase
+## Finger-dance orbit showcase
 
 The README orbit uses two upright hands with wrist centers 0.16 m apart. PhysX
 records the joint-driven motion at 240 Hz, sampled at 60 Hz; the path tracer replays
 the measured link transforms with unchanged source materials and textures. The
 camera makes one complete periodic orbit around the hands' shared centerline.
 
-The motor sequence runs at 1.5× its 18-second reference pace. PhysX therefore
-simulates 12 seconds directly; all 720 measured poses are rendered at 60 fps and
-1600 × 1000, without post-render retiming. The looping 640 × 400 GIF contains
-360 frames at 30 fps over the same 12 seconds. Both media files passed full decoding.
+The 15-second motor sequence is simulated directly; all 900 measured poses are
+rendered at 60 fps and 1600 × 1000, without post-render retiming. The looping
+640 × 400 GIF contains 450 frames at 30 fps over the same 15 seconds. Both media
+files passed full decoding. Run `examples/finger_dance.py` to reproduce the dance.
 
-The sequence holds a relaxed fist, opens, forms a V-sign, performs two lateral
-sway cycles with the extended fingers, and returns to its initial pose. Finger
-flexion targets are 1.15 / 1.35 / 0.95 rad for MCP / PIP / DIP; the thumb stays
-more open to leave visible space from the four fingers. Self-collision remains
-disabled for this appearance showcase. Multi-angle previews check the visible
-spacing; this is not a collision-free planning or physical contact validation.
-The V-sign preserves its opening angle while both extended fingers sway with a
-12-degree target amplitude in each direction. Joint-limit, speed, tracking, and
-loop-seam measurements are recorded in the simulation evidence.
-All seven existing unit tests also pass after the configurable spawn-pose change.
+The hands perform opposing finger waves, different sequences of pointing,
+V-sign, three-finger and relaxed-fist gestures, opposing V-sign sway, and piano-like
+individual and paired finger movements before returning to the initial pose.
+Finger flexion targets are 1.05 / 1.12 / 0.82 rad for MCP / PIP / DIP; the thumb
+stays outside the curled fingers. Quintic transitions keep target velocity and
+acceleration continuous at each gesture boundary. The V-sign has a 12-degree
+lateral sway target amplitude.
+
+The maximum measured joint speed is 2.814 rad/s, below the configured 3 rad/s
+limit. RMS tracking error is below 0.026 rad, maximum joint-limit violation is
+below 0.000005 rad, and loop-seam joint error is below 0.000003 rad. Self-collision
+remains disabled. Seven key poses and additional side/back views were inspected
+for visible spacing, followed by 30 samples of the final video. These appearance
+checks are not collision-free planning or physical contact validation.
 
 Evidence: [simulation](evidence/orbit_simulation.json),
 [render settings](evidence/orbit_render.json), and

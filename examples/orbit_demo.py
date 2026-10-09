@@ -74,7 +74,7 @@ def joint_target(names, side, fraction, limits, peace_sway_deg=12.0):
     return target
 
 
-def simulate(a):
+def simulate(a, target_fn=joint_target, motion_metadata=None):
     import numpy as np
     import torch
     import isaaclab.sim as sim_utils
@@ -123,7 +123,7 @@ def simulate(a):
             t = frame / a.fps + (substep + 1) * dt
             targets = {}
             for side, hand in hands.items():
-                target = joint_target(
+                target = target_fn(
                     hand.joint_names,
                     side,
                     t / duration,
@@ -195,6 +195,8 @@ def simulate(a):
         "motion": "PhysX PD-driven relaxed fist, open hand, V-sign with two lateral sway cycles; quintic target transitions",
         "scope": "Free-space appearance and articulation showcase, not a physical-hand calibration test",
     }
+    if motion_metadata:
+        report.update(motion_metadata)
     (a.output / "simulation.json").write_text(json.dumps(report, indent=2) + "\n")
     (a.output / "physics.json").write_text(json.dumps(physics, indent=2) + "\n")
     assert all(r["max_joint_limit_violation_rad"] < 0.01 for r in reports.values()), (
@@ -203,7 +205,7 @@ def simulate(a):
     print("SIM_COMPLETE", json.dumps(report), flush=True)
 
 
-def render(a, app):
+def render(a, app, *, preview_poses=None, video_name=None, camera_offset_deg=0):
     import numpy as np
     import imageio.v2 as imageio
     from PIL import Image
@@ -317,7 +319,7 @@ def render(a, app):
     def capture(frame, warm=False, angle=None, distance_scale=1.0):
         set_frame(frame)
         if angle is None:
-            angle = 2 * math.pi * frame / count
+            angle = 2 * math.pi * frame / count + math.radians(camera_offset_deg)
         eye = center + distance_scale * np.array(
             (radius * math.sin(angle), -radius * math.cos(angle), elevation)
         )
@@ -336,16 +338,25 @@ def render(a, app):
             previews / f"orbit_{round(360 * fraction):03d}.png"
         )
         print("PREVIEW", round(360 * fraction), flush=True)
-    for label, fraction in (
+    pose_previews = preview_poses if preview_poses is not None else (
         ("relaxed_fist", 2.2 / 12),
         ("peace_sway_left", (5.5 + 3.5 * 0.125) / 12),
         ("peace_sway_right", (5.5 + 3.5 * 0.375) / 12),
-    ):
+    )
+    for label, fraction in pose_previews:
         Image.fromarray(capture(round(fraction * count), warm=True, angle=0)).save(
             previews / f"gesture_{label}.png"
         )
         print("PREVIEW", label, flush=True)
-    if a.preview:
+        if a.preview and preview_poses is not None:
+            for angle_deg in (60, 180, 300):
+                Image.fromarray(
+                    capture(
+                        round(fraction * count), warm=True,
+                        angle=math.radians(angle_deg), distance_scale=0.85,
+                    )
+                ).save(previews / f"gesture_{label}_{angle_deg:03d}.png")
+    if a.preview and preview_poses is None:
         for angle_deg in (0, 60, 120, 180, 240, 300):
             Image.fromarray(
                 capture(
@@ -357,7 +368,7 @@ def render(a, app):
             ).save(previews / f"fist_closeup_{angle_deg:03d}.png")
     if not a.preview:
         writer = imageio.get_writer(
-            a.output / f"revosim-orbit-{a.fps}fps.mp4",
+            a.output / (video_name or f"revosim-orbit-{a.fps}fps.mp4"),
             fps=a.fps,
             codec="libx264",
             macro_block_size=1,
@@ -391,7 +402,8 @@ def render(a, app):
             "samples_per_update": a.samples,
             "updates_per_frame": 2,
             "orbit_degrees": 360,
-            "frame_angles": "2*pi*frame/frame_count; seamless periodic camera",
+            "camera_offset_deg": camera_offset_deg,
+            "frame_angles": "2*pi*frame/frame_count + radians(camera_offset_deg); seamless periodic camera",
             "orbit_center_world_m": center.tolist(),
             "orbit_radius_m": float(radius),
             "wrist_center_spacing_m": a.hand_spacing,
