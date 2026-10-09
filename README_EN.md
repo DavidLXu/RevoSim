@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+  HKUST(GZ) · BrainCo · Georgia Tech
+</p>
+
+<p align="center">
   <a href="https://davidlxu.github.io/RevoSim-web/">Project Website</a> ·
   <a href="README.md">中文</a> ·
   <strong>English</strong>
