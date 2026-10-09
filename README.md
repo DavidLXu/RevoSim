@@ -197,7 +197,7 @@ tests/           通道契约、坐标配准、六维合力及独立性测试
 ```bibtex
 @misc{zhang2026revosim,
   title = {{RevoSim}: Scalable Multimodal Tactile Simulation for Dexterous Manipulation},
-  author = {Zhang, Ke and Xu, Lixin and Wang, Ziyi and Tan, Jie and Li, Chuanyu and Xu, Renjing},
+  author = {Zhang, Ke and Xu, Lixin and Wang, Ziyi and Dong, Xiyue and Tan, Jie and Li, Chuanyu and Xu, Renjing},
   year = {2026},
   howpublished = {Project website and source code},
   url = {https://davidlxu.github.io/RevoSim-web/}

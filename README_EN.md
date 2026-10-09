@@ -197,7 +197,7 @@ To cite this project, use the following BibTeX entry:
 ```bibtex
 @misc{zhang2026revosim,
   title = {{RevoSim}: Scalable Multimodal Tactile Simulation for Dexterous Manipulation},
-  author = {Zhang, Ke and Xu, Lixin and Wang, Ziyi and Tan, Jie and Li, Chuanyu and Xu, Renjing},
+  author = {Zhang, Ke and Xu, Lixin and Wang, Ziyi and Dong, Xiyue and Tan, Jie and Li, Chuanyu and Xu, Renjing},
   year = {2026},
   howpublished = {Project website and source code},
   url = {https://davidlxu.github.io/RevoSim-web/}
