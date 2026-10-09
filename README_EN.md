@@ -1,6 +1,10 @@
 <h1 align="center">RevoSim: Scalable Multimodal Tactile Simulation for Dexterous Manipulation</h1>
 
 <p align="center">
+  Ke Zhang · Lixin Xu · Ziyi Wang · Xiyue Dong · Jie Tan · Chuanyu Li · Renjing Xu
+</p>
+
+<p align="center">
   <a href="https://davidlxu.github.io/RevoSim-web/">Project Website</a> ·
   <a href="README.md">中文</a> ·
   <strong>English</strong>
@@ -22,7 +26,7 @@ Each hand has 21 revolute joints, 247 piezoresistive channels, and five fingerti
 
 [Watch the three-object parallel tactile demo (60 fps, approximately 19 seconds)](docs/videos/revosim-demo-60fps.mp4)
 
-A sphere, a cube, and an irregular convex polyhedron press and slide across both hands simultaneously. Random changes in position and direction cover all ten fingertips and every proximal, middle-phalanx, and palm piezoresistive region in approximately 19 seconds. The wrist centers are 20 cm apart. Six-axis wrench readings include only contacts on the fingertip soft pads; pressing other finger segments does not contribute to those readings.
+A sphere, a cube, and an irregular convex polyhedron press and slide across both hands simultaneously. Random changes in position and direction cover all ten fingertips and every proximal, middle-phalanx, and palm piezoresistive region in approximately 19 seconds.
 
 ## Environment
 
@@ -85,8 +89,6 @@ In the longer demo, `--quick` checks only the left/right index fingertips and pa
 ## Dashboard and data
 
 The simulation view is centered. RGB, marker-field, depth-map, and six-axis contact force/torque panels for the five left fingertips appear on the left, and those for the right hand appear on the right. Two piezoresistive views at the bottom retain the full hand silhouettes, lighting up palm and MCP/PIP regions. Outlines and labels identify each sensor group.
-
-The source finger sensors provide proximal/middle-phalanx piezoresistive sensing and fingertip visuotactile sensing; no fingertip piezoresistive hardware is invented. The bottom pressure maps use orthographic projections of the actual mesh outlines and sampling points, preserving the initial open-hand pose. Each point always corresponds to the same raw channel. Pressure colors saturate at a response of 1, the depth scale is 0–4 mm, and marker arrows are magnified 4×. Raw data is neither clipped nor magnified. See the [finger-segment pressure response example](docs/images/pressure.png).
 
 The output directory contains:
 

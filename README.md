@@ -1,6 +1,10 @@
 <h1 align="center">RevoSim: Scalable Multimodal Tactile Simulation for Dexterous Manipulation</h1>
 
 <p align="center">
+  Ke Zhang · Lixin Xu · Ziyi Wang · Xiyue Dong · Jie Tan · Chuanyu Li · Renjing Xu
+</p>
+
+<p align="center">
   <a href="https://davidlxu.github.io/RevoSim-web/">项目网站</a> ·
   <strong>中文</strong> ·
   <a href="README_EN.md">English</a>
@@ -22,7 +26,7 @@ RevoSim 面向 sim-to-real，将视觉外观、关节运动学、动力学与多
 
 [观看三物体并行触觉 Demo（60 fps，约 19 秒）](docs/videos/revosim-demo-60fps.mp4)
 
-球体、方块和不规则凸多面体同时在双手上按压和滑动，随机切换位置与方向，在约 19 秒内覆盖十个指尖及全部近节、中节和掌面压阻分区。双手腕部中心间距为 20 cm。六维力只统计指尖软垫上的接触，按压其他指节不会被计入指尖读数。
+球体、方块和不规则凸多面体同时在双手上按压和滑动，随机切换位置与方向，在约 19 秒内覆盖十个指尖及全部近节、中节和掌面压阻分区。
 
 ## 环境
 
@@ -85,8 +89,6 @@ python tools/make_orbit_gif.py outputs/finger-dance/revosim-finger-dance-60fps.m
 ## 面板与数据
 
 主视图居中。左手的五指 RGB、Marker field、Depth map 和六维接触力/力矩面板在左，右手面板在右。底部两个压阻视图保留完整手形，在对应掌面和 MCP/PIP 区域点亮，区域框与标签说明每组传感器位置。
-
-原手指传感器位置是近节/中节压阻与指尖视触觉，未虚构指尖压阻硬件。底部压阻图根据实际网格轮廓和采样点作正交投影，保持初始张开手姿态；每点始终对应同一原始通道。压阻配色在响应 1 处饱和，深度配色为 0–4 mm，Marker 箭头放大 4 倍；原始数据不裁剪或放大。可查看[指节压阻响应示例](docs/images/pressure.png)。
 
 输出目录包括：
 
