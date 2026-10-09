@@ -1,0 +1,27 @@
+{
+  "frames": 720,
+  "fps": 60,
+  "duration_s": 12.0,
+  "motion_speed": 1.5,
+  "post_render_retiming": false,
+  "self_collision": false,
+  "resolution": [
+    1600,
+    1000
+  ],
+  "renderer": "PathTracing",
+  "samples_per_update": 32,
+  "updates_per_frame": 2,
+  "orbit_degrees": 360,
+  "frame_angles": "2*pi*frame/frame_count; seamless periodic camera",
+  "orbit_center_world_m": [
+    0.0,
+    0.0007442680519231595,
+    0.1603191036868112
+  ],
+  "orbit_radius_m": 0.8580015311792093,
+  "wrist_center_spacing_m": 0.16,
+  "model_material_changes": false,
+  "poses": "Recorded PhysX rigid-body link transforms",
+  "source_assets": "Bundled RevoSim left and right hand USDs"
+}

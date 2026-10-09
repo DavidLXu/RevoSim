@@ -1,0 +1,23 @@
+{
+  "package_source_commit": "9b1d34d",
+  "unit_tests_passed": 7,
+  "wheel_installed_outside_checkout": true,
+  "asset_sha256_check": "passed",
+  "ui_provider": "passed",
+  "minimal_read_sensors_example": "passed",
+  "recorded_index_depth_peak_m": 0.0012182817,
+  "versions": {
+    "python": "3.11",
+    "isaacsim": "5.1.0.0",
+    "isaaclab_imported_source": "0.54.2 / v2.3.2",
+    "torch": "2.7.0+cu128",
+    "warp-lang": "1.17.0",
+    "numpy": "1.26.0",
+    "scipy": "1.15.3",
+    "trimesh": "4.5.1",
+    "h5py": "3.16.0",
+    "imageio-ffmpeg": "0.6.0"
+  },
+  "tested_hardware": "Ubuntu 24.04.3 / RTX 5090",
+  "limitation": "UI provider tested headlessly; physical keyboard interaction on a local display was not exercised."
+}

@@ -1,0 +1,586 @@
+{
+  "source_urdf": "/home/tan/下载/brainco-description-20261008/brainco-description-20261008/revo3_system/urdf/revo3_right.urdf",
+  "source_urdf_sha256": "42e03b1dc6f8dc1f01bdbbebed512dc861de7767d755e097ff598db2be1c3233",
+  "links": 58,
+  "joints": 57,
+  "moving_joints": 21,
+  "visual_meshes": [
+    {
+      "link": "right_hand_base_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_hand_base_link.STL",
+      "source_hash": "d332f29ea1d9369309edce23e29ba48a61872cc9d5a86f1410ea459f0bbf26a7",
+      "usd_mesh": "/Revo3/right_hand_base_link/visual_0/Mesh",
+      "material": "joint_metal",
+      "faces": 7366,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_MPR_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_MPR_link.STL",
+      "source_hash": "b57621c37f0c1b70dc3cf0ac051a6fb6a912ab240cd317771ac7a08beb64e70f",
+      "usd_mesh": "/Revo3/right_middle_MPR_link/visual_0/Mesh",
+      "material": "joint_metal",
+      "faces": 5162,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_MCP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_MCP_link.STL",
+      "source_hash": "49b9cdbe908c96ad92670dc98d98bdc7ba01d1d145aec3cf0fcef02c26827052",
+      "usd_mesh": "/Revo3/right_middle_MCP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 7038,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_PIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_PIP_link.STL",
+      "source_hash": "f18059ffa62d0027f8434129cc938d255d400b8409bcb5d837b72b9d80f7bf9e",
+      "usd_mesh": "/Revo3/right_middle_PIP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 7925,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_DIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_DIP_link__revo3_silicone_2162u_approx.stl",
+      "source_hash": "e5b9a048dafd81b9205f541f89df269e62ee862a12f713e03fb1f9796b79358e",
+      "usd_mesh": "/Revo3/right_middle_DIP_link/visual_0/Mesh",
+      "material": "gray_cap",
+      "faces": 1836,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_DIP_link",
+      "visual_index": 1,
+      "source_mesh": "meshes/hands/visual/right/right_middle_DIP_link__revo3_polished_aluminum.stl",
+      "source_hash": "b75c0c460bdc5db48706c16cd6667f1c43bad9ee06594ca92ce3119f1b1aab59",
+      "usd_mesh": "/Revo3/right_middle_DIP_link/visual_1/Mesh",
+      "material": "silver_metal",
+      "faces": 5105,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_DIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_DIP_rubber_link.STL",
+      "source_hash": "c448a39f0f914fcbcab2f2174c5b707b3c6f7bf31378508fac85944fc7385bdf",
+      "usd_mesh": "/Revo3/right_middle_DIP_rubber_link/visual_0/Mesh",
+      "material": "tip_pad",
+      "faces": 3280,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_PIP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_PIP_touch_link.STL",
+      "source_hash": "5de1ca17b80badae80ca841623a4e76d50eae72d3a90515044ea51d7c2c9833b",
+      "usd_mesh": "/Revo3/right_middle_PIP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2753,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_PIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_PIP_rubber_link.STL",
+      "source_hash": "d1232020169b8ac5c17498aafd2ef08b41f97592350067e36885977df2b99cdf",
+      "usd_mesh": "/Revo3/right_middle_PIP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2552,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_MCP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_MCP_touch_link.STL",
+      "source_hash": "45dac741f853bf1d4d556e467b837983ac199ffa07398d57a115e604fd912058",
+      "usd_mesh": "/Revo3/right_middle_MCP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2662,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_middle_MCP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_middle_MCP_rubber_link.STL",
+      "source_hash": "95436c9a139808047b849e161354ebb794b29d757808ae721f1f353ad506c2b3",
+      "usd_mesh": "/Revo3/right_middle_MCP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2504,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_CMP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_CMP_link.STL",
+      "source_hash": "ac621ea35f14435378aa4adc9c167b9fc52186b43609479e05d3d2d0385ea14e",
+      "usd_mesh": "/Revo3/right_thumb_CMP_link/visual_0/Mesh",
+      "material": "joint_metal",
+      "faces": 5456,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_CMR_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_CMR_link.STL",
+      "source_hash": "4ee7ae2c28d6994665c0bd3dd603dfa3ae4dd6e86e0e3b84137a377baddf15a7",
+      "usd_mesh": "/Revo3/right_thumb_CMR_link/visual_0/Mesh",
+      "material": "joint_metal",
+      "faces": 3866,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_MCP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_MCP_link.STL",
+      "source_hash": "699531f1c2d34cd03bb3977ebc95d988f80bc5fa4a6734975dd8a5428b0d2f68",
+      "usd_mesh": "/Revo3/right_thumb_MCP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 6374,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_PIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_PIP_link.STL",
+      "source_hash": "21b6e1a7f57889c4ba6462ff940bfcc88c7d07bde6f8a2516000221063191ee6",
+      "usd_mesh": "/Revo3/right_thumb_PIP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 8080,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_DIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_DIP_link__revo3_silicone_2162u_approx.stl",
+      "source_hash": "55898e692e0326e875d2852fa701c22a8af4831f91e69a92a0dda1e44b484110",
+      "usd_mesh": "/Revo3/right_thumb_DIP_link/visual_0/Mesh",
+      "material": "gray_cap",
+      "faces": 1866,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_DIP_link",
+      "visual_index": 1,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_DIP_link__revo3_polished_aluminum.stl",
+      "source_hash": "52454b1a59eeb8b2cc1fe1b6bf089922e1eeb0995a115d0b6a4b3dc459697a5f",
+      "usd_mesh": "/Revo3/right_thumb_DIP_link/visual_1/Mesh",
+      "material": "silver_metal",
+      "faces": 5094,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_DIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_DIP_rubber_link.STL",
+      "source_hash": "e337c981f8725838c8ebb6e4dc08d0a9914d5fb27a8cb47b39c71aa267a2754b",
+      "usd_mesh": "/Revo3/right_thumb_DIP_rubber_link/visual_0/Mesh",
+      "material": "tip_pad",
+      "faces": 3420,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_PIP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_PIP_touch_link.STL",
+      "source_hash": "e247b2d5660334d7c2e24ff62ca028800fb5216bbbf31b49213f2b7cb4c43eb1",
+      "usd_mesh": "/Revo3/right_thumb_PIP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 1996,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_PIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_PIP_rubber_link.STL",
+      "source_hash": "5fa3c29ab83767467884f16fce2020b335a61acd28270918fb4b3161ad1503d4",
+      "usd_mesh": "/Revo3/right_thumb_PIP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 4148,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_MCP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_MCP_touch_link.STL",
+      "source_hash": "a6d1ebdcd5a0829a9a1786e702cd09f4b7a225e4a928caaeb9662233fb5b2157",
+      "usd_mesh": "/Revo3/right_thumb_MCP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2294,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_thumb_MCP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_thumb_MCP_rubber_link.STL",
+      "source_hash": "c94d0dcc48dae67ff1e9ff71ddfe92a59519e3a889bae8cac132e4ca47bfdb12",
+      "usd_mesh": "/Revo3/right_thumb_MCP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2600,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_MPR_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_MPR_link.STL",
+      "source_hash": "778f65f9c4df37b63c8475e7f0073eef6f921841975655864fbb0ef74be0211a",
+      "usd_mesh": "/Revo3/right_index_MPR_link/visual_0/Mesh",
+      "material": "joint_metal",
+      "faces": 5162,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_MCP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_MCP_link.STL",
+      "source_hash": "6ef66f9a169a18c6ff2b262a3d6868ae7b9d4f238dfc78f33b3f5e829ecf738c",
+      "usd_mesh": "/Revo3/right_index_MCP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 7038,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_PIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_PIP_link.STL",
+      "source_hash": "514cc2b12fe11d35f2d1a09b7d5b0a6d1a32d728cb36707b90cfe5ac9c7c4538",
+      "usd_mesh": "/Revo3/right_index_PIP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 7925,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_DIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_DIP_link__revo3_silicone_2162u_approx.stl",
+      "source_hash": "1cbad86aaedf5f525b9f9f8b774a6426d770d8d67af7965bf5eba5162ff5a325",
+      "usd_mesh": "/Revo3/right_index_DIP_link/visual_0/Mesh",
+      "material": "gray_cap",
+      "faces": 1836,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_DIP_link",
+      "visual_index": 1,
+      "source_mesh": "meshes/hands/visual/right/right_index_DIP_link__revo3_polished_aluminum.stl",
+      "source_hash": "df10a0c3a5338633822c8d8c7f68a73b5c1a5c83c2d5fa82afaa44190be9875f",
+      "usd_mesh": "/Revo3/right_index_DIP_link/visual_1/Mesh",
+      "material": "silver_metal",
+      "faces": 5105,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_DIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_DIP_rubber_link.STL",
+      "source_hash": "ab641140de4029d2be1f2c2ca0ba0d199740fefa617a6ea7781556fc90833fe2",
+      "usd_mesh": "/Revo3/right_index_DIP_rubber_link/visual_0/Mesh",
+      "material": "tip_pad",
+      "faces": 3280,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_PIP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_PIP_touch_link.STL",
+      "source_hash": "2d1330a0de328e945ae6813f84976d85ede18f0468b48f9e3b0a53bcd6a749b9",
+      "usd_mesh": "/Revo3/right_index_PIP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2753,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_PIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_PIP_rubber_link.STL",
+      "source_hash": "69904c0bd24587db0c69f69fd9bc2752977e7a24c7eac78b21d46fc44ae81dc9",
+      "usd_mesh": "/Revo3/right_index_PIP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2552,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_MCP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_MCP_touch_link.STL",
+      "source_hash": "8a1c14d697f2d191dc6c38773756a9454661332dc5f3f889df8451ca275bb4f7",
+      "usd_mesh": "/Revo3/right_index_MCP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2662,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_index_MCP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_index_MCP_rubber_link.STL",
+      "source_hash": "3f2ef234e2f5718c1d90d5862cbe70fde07ba6cde75db53cb540db9f447480a0",
+      "usd_mesh": "/Revo3/right_index_MCP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2504,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_MPR_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_MPR_link.STL",
+      "source_hash": "b4a8dd29ebe584a488fb44ac9911cc4dca013dcfc2ee00c2f5f5489fe30a6dd5",
+      "usd_mesh": "/Revo3/right_ring_MPR_link/visual_0/Mesh",
+      "material": "joint_metal",
+      "faces": 5162,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_MCP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_MCP_link.STL",
+      "source_hash": "e369d9c6caae6f0705c7f5857bb838e2c1d4fe960a7af97ca1d076ce22d141ef",
+      "usd_mesh": "/Revo3/right_ring_MCP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 7038,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_PIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_PIP_link.STL",
+      "source_hash": "b435796cc43eea205d772462e2449cd87c08ef7bb2e642f7d44695c15040610b",
+      "usd_mesh": "/Revo3/right_ring_PIP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 7925,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_DIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_DIP_link__revo3_silicone_2162u_approx.stl",
+      "source_hash": "9b4d47a113f7ebe77b0fed625632ae8753172c97823ed6d042aae096913f5521",
+      "usd_mesh": "/Revo3/right_ring_DIP_link/visual_0/Mesh",
+      "material": "gray_cap",
+      "faces": 1836,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_DIP_link",
+      "visual_index": 1,
+      "source_mesh": "meshes/hands/visual/right/right_ring_DIP_link__revo3_polished_aluminum.stl",
+      "source_hash": "c4f1f2c13ad390e995dbd864258b388281f4268fc9e8219a06009820b59ebda3",
+      "usd_mesh": "/Revo3/right_ring_DIP_link/visual_1/Mesh",
+      "material": "silver_metal",
+      "faces": 5105,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_DIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_DIP_rubber_link.STL",
+      "source_hash": "ce328de52beaff3b2fb44fbb5c1e4160c3db71fe16369dc2864c56d4a6eb5856",
+      "usd_mesh": "/Revo3/right_ring_DIP_rubber_link/visual_0/Mesh",
+      "material": "tip_pad",
+      "faces": 3280,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_PIP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_PIP_touch_link.STL",
+      "source_hash": "7919e404d1b60bb007fc99b4ec0f2dbda17ece6bfbaa817d97b02eff4f811d1a",
+      "usd_mesh": "/Revo3/right_ring_PIP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2753,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_PIP_tubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_PIP_tubber_link.STL",
+      "source_hash": "b6f16e17b3f9f2c7dcac8a8cbc5a3daafdefc9cd6554ceed4ff361553a67ffeb",
+      "usd_mesh": "/Revo3/right_ring_PIP_tubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2552,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_MCP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_MCP_touch_link.STL",
+      "source_hash": "b794b6837e086d0d1c31c46ee1925433ffe1125860398182664cb357cdabda00",
+      "usd_mesh": "/Revo3/right_ring_MCP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2662,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_ring_MCP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_ring_MCP_rubber_link.STL",
+      "source_hash": "d5bde395df6bd537c3f1e62b9b6e50499acd7408349bbee31b6ff91213962387",
+      "usd_mesh": "/Revo3/right_ring_MCP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2504,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_MPR_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_MPR_link.STL",
+      "source_hash": "9c436c602f583844edff98c820bc98d73a4dba9b12d6ee5b398e451318613b07",
+      "usd_mesh": "/Revo3/right_little_MPR_link/visual_0/Mesh",
+      "material": "joint_metal",
+      "faces": 5162,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_MCP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_MCP_link.STL",
+      "source_hash": "f81317250e274bdb0500860356fb78daf5e0657166fad789c532680c2627b1a5",
+      "usd_mesh": "/Revo3/right_little_MCP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 7038,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_PIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_PIP_link.STL",
+      "source_hash": "02e21a063d03351f89bc61c2354cc369c44badda63e5cf70df2611b0acba09d8",
+      "usd_mesh": "/Revo3/right_little_PIP_link/visual_0/Mesh",
+      "material": "silver_metal",
+      "faces": 7925,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_DIP_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_DIP_link__revo3_silicone_2162u_approx.stl",
+      "source_hash": "9358f21849f53a5731f6c71e58d8690fd50aa84bea76c96c9a1bcd6a11a27fdf",
+      "usd_mesh": "/Revo3/right_little_DIP_link/visual_0/Mesh",
+      "material": "gray_cap",
+      "faces": 1836,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_DIP_link",
+      "visual_index": 1,
+      "source_mesh": "meshes/hands/visual/right/right_little_DIP_link__revo3_polished_aluminum.stl",
+      "source_hash": "22aaba8f3925455eaf69b21fe9d67d59b1dd02950e19039b403347ed4fe112a6",
+      "usd_mesh": "/Revo3/right_little_DIP_link/visual_1/Mesh",
+      "material": "silver_metal",
+      "faces": 5105,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_DIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_DIP_rubber_link.STL",
+      "source_hash": "db7e6ec93553f9e4d0b04f937492c0732e3ebd66810587bdab1ba9ec0e191d46",
+      "usd_mesh": "/Revo3/right_little_DIP_rubber_link/visual_0/Mesh",
+      "material": "tip_pad",
+      "faces": 3280,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_PIP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_PIP_touch_link.STL",
+      "source_hash": "d29535353cc65d3c7f971b3e6099da595ce421e93f22765176ce59d53899b12f",
+      "usd_mesh": "/Revo3/right_little_PIP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2753,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_PIP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_PIP_rubber_link.STL",
+      "source_hash": "43fac09a38f07a7da825bd7a2a94446b22411c54a5f0bce81966b3222552318d",
+      "usd_mesh": "/Revo3/right_little_PIP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2552,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_MCP_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_MCP_touch_link.STL",
+      "source_hash": "50f11f719380358990e780c1dd82a94a43ae172a7950eff641a1ee4fbd0e209a",
+      "usd_mesh": "/Revo3/right_little_MCP_touch_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2662,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_little_MCP_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_little_MCP_rubber_link.STL",
+      "source_hash": "59e13548dfae5e83fb8583b3b70c0998f0cdad85064e97278ff1381577c9228a",
+      "usd_mesh": "/Revo3/right_little_MCP_rubber_link/visual_0/Mesh",
+      "material": "finger_pad",
+      "faces": 2504,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_plam_touch_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_plam_touch_link.STL",
+      "source_hash": "a4c8358c4e4270576863c6de550d51df98e793ada46b2d1c5df2e60cce00fe01",
+      "usd_mesh": "/Revo3/right_plam_touch_link/visual_0/Mesh",
+      "material": "palm_pad",
+      "faces": 2172,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_plam_rubber_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_plam_rubber_link.STL",
+      "source_hash": "92d4cc77ffb062c292bf26f1f04d1b586dba3680d07d813ec23a4b56a043fe99",
+      "usd_mesh": "/Revo3/right_plam_rubber_link/visual_0/Mesh",
+      "material": "palm_pad",
+      "faces": 6004,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_plam_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_plam_link__revo3_white_pc.stl",
+      "source_hash": "3daf2fc0fdf3918ab9352442b0f072961ffb034616a56a8ef537bdd5f8054a8c",
+      "usd_mesh": "/Revo3/right_plam_link/visual_0/Mesh",
+      "material": "silver_coating",
+      "faces": 3832,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_plam_link",
+      "visual_index": 1,
+      "source_mesh": "meshes/hands/visual/right/right_plam_link__revo3_aluminum.stl",
+      "source_hash": "2c42677839335f8c4f93b1760ddd27c1474bfbd5f2c4ecdb73d2d5177e14c585",
+      "usd_mesh": "/Revo3/right_plam_link/visual_1/Mesh",
+      "material": "silver_metal",
+      "faces": 12328,
+      "uv": "metric_local_box_8.1mm"
+    },
+    {
+      "link": "right_plam_led_link",
+      "visual_index": 0,
+      "source_mesh": "meshes/hands/visual/right/right_plam_led_link.dae",
+      "source_hash": "68f31727d90086c28c4520503f5ec40cc555fa74aa32c047c93d63ee4c5bc2da",
+      "usd_mesh": "/Revo3/right_plam_led_link/visual_0/Mesh",
+      "material": "screen_wark",
+      "faces": 1088,
+      "uv": "source_screen_UV"
+    }
+  ],
+  "joints_and_inertia_preserved": true,
+  "collision_policy": "Visual-only: collision elements/meshes omitted at user request; source URDF unchanged",
+  "dae_roundtrip_max_vertex_error_m": 0.0,
+  "usd_float32_max_vertex_error_m": 4.988727486665567e-11,
+  "source_screen_uv_preserved": true,
+  "taxel_policy": "Original marker geometry/links retained. Default USD presentation hides spheres; with_taxels wrapper shows them. URDF markers unchanged.",
+  "full_PBR_in_USD_only": true
+}

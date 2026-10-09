@@ -1,0 +1,17 @@
+{
+  "docs/videos/revosim-demo-60fps.mp4": {
+    "bytes": 3387949,
+    "sha256": "f133171ba97a6fca76ca6802efd27761e27fb24bd9c8b38fa0686e18a12c1f96"
+  },
+  "docs/images/dashboard.png": {
+    "bytes": 812993,
+    "sha256": "1bd954b7371a6d520c0db518d2c9cc37af3dd55b0bccd9e34cd6c96aa82cb076"
+  },
+  "video": {
+    "width": 2560,
+    "height": 1600,
+    "r_frame_rate": "60/1",
+    "duration": "18.950000",
+    "nb_read_frames": "1137"
+  }
+}

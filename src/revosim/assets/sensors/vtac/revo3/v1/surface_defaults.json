@@ -1,0 +1,67 @@
+{
+  "right_indexdip_roll_rubber_link": {
+    "max_distance": 0.015,
+    "ray_axis": "+x",
+    "grid_u_axis": "+y",
+    "grid_v_axis": "+z",
+    "grid_u_size": 0.02068358,
+    "grid_v_size": 0.0184646,
+    "grid_center": [
+      0.00105538,
+      0.0011448,
+      0.01765266
+    ]
+  },
+  "right_middip_roll_rubber_link": {
+    "max_distance": 0.015,
+    "ray_axis": "+x",
+    "grid_u_axis": "+y",
+    "grid_v_axis": "+z",
+    "grid_u_size": 0.0202,
+    "grid_v_size": 0.0182,
+    "grid_center": [
+      0.00159,
+      0.00103,
+      0.04757
+    ]
+  },
+  "right_pinkydip_roll_rubber_link": {
+    "max_distance": 0.015,
+    "ray_axis": "+x",
+    "grid_u_axis": "+y",
+    "grid_v_axis": "+z",
+    "grid_u_size": 0.02068569,
+    "grid_v_size": 0.01843646,
+    "grid_center": [
+      0.00100531,
+      -0.00114829,
+      0.01764967
+    ]
+  },
+  "right_ringdip_roll_rubber_link": {
+    "max_distance": 0.015,
+    "ray_axis": "+x",
+    "grid_u_axis": "+y",
+    "grid_v_axis": "+z",
+    "grid_u_size": 0.02056884,
+    "grid_v_size": 0.01818433,
+    "grid_center": [
+      0.00104103,
+      -0.00038099,
+      0.01768645
+    ]
+  },
+  "right_thumbdip_roll_rubber_link": {
+    "max_distance": 0.015,
+    "ray_axis": "+y",
+    "grid_u_axis": "+x",
+    "grid_v_axis": "+z",
+    "grid_u_size": 0.01343826,
+    "grid_v_size": 0.02319049,
+    "grid_center": [
+      -0.00072565,
+      0.02421566,
+      -0.00022462
+    ]
+  }
+}

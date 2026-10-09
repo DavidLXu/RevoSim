@@ -1,0 +1,50 @@
+{
+  "combined_full_decode": {
+    "passed": true,
+    "frames": 8193,
+    "dropped_frames": 0,
+    "duplicated_frames": 0
+  },
+  "videos": [
+    {
+      "path": "sphere/dashboard.mp4",
+      "sha256": "eb453b237bd884bcdd87b45e2b8eaa9b24af1a6454fd1437a5ce9672e9e2a736",
+      "bytes": 6283052,
+      "width": 2560,
+      "height": 1600,
+      "r_frame_rate": "60/1",
+      "duration": "45.516667",
+      "nb_frames": "2731"
+    },
+    {
+      "path": "cube/dashboard.mp4",
+      "sha256": "536c3c19b73fe459394f993f8bd7a013b23a8acffb1f507184b2854c6399da63",
+      "bytes": 6632876,
+      "width": 2560,
+      "height": 1600,
+      "r_frame_rate": "60/1",
+      "duration": "45.516667",
+      "nb_frames": "2731"
+    },
+    {
+      "path": "polyhedron/dashboard.mp4",
+      "sha256": "090e1b85e7c709d064748cca869a642996ab57f0b8006d413d14e6f28fe85552",
+      "bytes": 6578147,
+      "width": 2560,
+      "height": 1600,
+      "r_frame_rate": "60/1",
+      "duration": "45.516667",
+      "nb_frames": "2731"
+    },
+    {
+      "path": "RevoSim_all_shapes_60fps.mp4",
+      "sha256": "e8fd08e851540754666cbbf104f8dd04ce462819f4f012c1a11ea9e6972a3d52",
+      "bytes": 19493683,
+      "width": 2560,
+      "height": 1600,
+      "r_frame_rate": "60/1",
+      "duration": "136.550000",
+      "nb_frames": "8193"
+    }
+  ]
+}

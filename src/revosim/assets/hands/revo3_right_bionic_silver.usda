@@ -1,0 +1,7 @@
+#usda 1.0
+(
+    defaultPrim = "Revo3"
+    metersPerUnit = 1
+    upAxis = "Z"
+    subLayers = [@usd/revo3_right/bionic_silver.usda@]
+)

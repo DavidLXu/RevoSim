@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="left_mx_touch_pressure">
+  <link name="left_middle_MCP_touch_link">
+    <pressure_pad name="left_middle_MCP_touch_link_pressure_pad" points_npy="left_middle_MCP_touch_link_points.npy" normals_npy="left_middle_MCP_touch_link_normals.npy" taxel_count="23" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_middle_PIP_touch_link">
+    <pressure_pad name="left_middle_PIP_touch_link_pressure_pad" points_npy="left_middle_PIP_touch_link_points.npy" normals_npy="left_middle_PIP_touch_link_normals.npy" taxel_count="4" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_index_MCP_touch_link">
+    <pressure_pad name="left_index_MCP_touch_link_pressure_pad" points_npy="left_index_MCP_touch_link_points.npy" normals_npy="left_index_MCP_touch_link_normals.npy" taxel_count="23" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_index_PIP_touch_link">
+    <pressure_pad name="left_index_PIP_touch_link_pressure_pad" points_npy="left_index_PIP_touch_link_points.npy" normals_npy="left_index_PIP_touch_link_normals.npy" taxel_count="4" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_ring_MCP_touch_link">
+    <pressure_pad name="left_ring_MCP_touch_link_pressure_pad" points_npy="left_ring_MCP_touch_link_points.npy" normals_npy="left_ring_MCP_touch_link_normals.npy" taxel_count="23" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_ring_PIP_touch_link">
+    <pressure_pad name="left_ring_PIP_touch_link_pressure_pad" points_npy="left_ring_PIP_touch_link_points.npy" normals_npy="left_ring_PIP_touch_link_normals.npy" taxel_count="4" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_little_MCP_touch_link">
+    <pressure_pad name="left_little_MCP_touch_link_pressure_pad" points_npy="left_little_MCP_touch_link_points.npy" normals_npy="left_little_MCP_touch_link_normals.npy" taxel_count="23" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_little_PIP_touch_link">
+    <pressure_pad name="left_little_PIP_touch_link_pressure_pad" points_npy="left_little_PIP_touch_link_points.npy" normals_npy="left_little_PIP_touch_link_normals.npy" taxel_count="4" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_thumb_MCP_touch_link">
+    <pressure_pad name="left_thumb_MCP_touch_link_pressure_pad" points_npy="left_thumb_MCP_touch_link_points.npy" normals_npy="left_thumb_MCP_touch_link_normals.npy" taxel_count="18" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_thumb_PIP_touch_link">
+    <pressure_pad name="left_thumb_PIP_touch_link_pressure_pad" points_npy="left_thumb_PIP_touch_link_points.npy" normals_npy="left_thumb_PIP_touch_link_normals.npy" taxel_count="4" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+  <link name="left_hand_touch_link">
+    <pressure_pad name="left_hand_touch_link_pressure_pad" points_npy="left_hand_touch_link_points.npy" normals_npy="left_hand_touch_link_normals.npy" taxel_count="117" correction_scale="1" normal_axis="0" normal_sign="1" origin_semantics="link_surface" stiffness="5000" damping="0" max_force="10" gain="1" bias="0" gamma="1" threshold="0" area="1" />
+  </link>
+</robot>

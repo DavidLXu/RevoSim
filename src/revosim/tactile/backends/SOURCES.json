@@ -1,0 +1,497 @@
+[
+  {
+    "source": "source/BrainCo_DexHand/BrainCo_DexHand/tasks/manager_based/dexsuite/mdp/observations.py",
+    "sha256": "17094b78393fe88bd5b0647b4cb3aef08e1af8b088e95684f68b0abf3dbf4116",
+    "destination": "envs/common/sensors/tactile/backends/observations.py"
+  },
+  {
+    "source": "source/BrainCo_DexHand/BrainCo_DexHand/tasks/manager_based/dexsuite/mdp/utils.py",
+    "sha256": "bee97c220280eb0ba484f0e21c1ba7d41e349eecfd7a039fa8c986a63e117574",
+    "destination": "envs/common/sensors/tactile/backends/utils.py"
+  },
+  {
+    "source": "source/BrainCo_DexHand/BrainCo_DexHand/force_map/pressure_taxel_map.py",
+    "sha256": "d81af339f49edda661714a5a0d0ede73fb69ebdbe0e2e9b51fd84d2cae98c5ca",
+    "destination": "envs/common/sensors/tactile/backends/pressure_taxel_map.py"
+  },
+  {
+    "source": "source/BrainCo_DexHand/BrainCo_DexHand/force_map/urdf_pressure_layout.py",
+    "sha256": "67185f3bc166963ed084631eecd2c4cd36812384d393098d85dc037d315d6609",
+    "destination": "envs/common/sensors/tactile/backends/urdf_pressure_layout.py"
+  },
+  {
+    "source": "source/BrainCo_DexHand/BrainCo_DexHand/force_map/warp_sdf_tactile_cfg.py",
+    "sha256": "a6aaa9d673efdcac49b09519933392b3018494fd34117ee76e1349a41cafa2f3",
+    "destination": "envs/common/sensors/tactile/backends/warp_sdf_tactile_cfg.py"
+  },
+  {
+    "source": "source/BrainCo_DexHand/BrainCo_DexHand/force_map/warp_sdf_tactile_data.py",
+    "sha256": "3234457dbccfd77f4f8f83fc7586aa5b7440044be2bf31a0adba14760925f84d",
+    "destination": "envs/common/sensors/tactile/backends/warp_sdf_tactile_data.py"
+  },
+  {
+    "source": "source/BrainCo_DexHand/BrainCo_DexHand/force_map/warp_sdf_tactile_sensor.py",
+    "sha256": "12de9a58a34cd48c685c4e7720cd9a9c4ecf8032f30490fbfd22c1376af1fce7",
+    "destination": "envs/common/sensors/tactile/backends/warp_sdf_tactile_sensor.py"
+  },
+  {
+    "source": "integrate/curved_hydroshear_adapter.py",
+    "sha256": "ce1f1afec59840dbfa1391fa4cff3a08b9ca81ceffa35e3498924cea19e6d7fc",
+    "destination": "envs/common/sensors/tactile/backends/curved_hydroshear_adapter.py"
+  },
+  {
+    "source": "integrate/tacex_rgb_adapter.py",
+    "sha256": "84f765e63783618f670e609a0129a77743571b388b7a48cde5adc68d3b0df83f",
+    "destination": "envs/common/sensors/tactile/backends/tacex_rgb_adapter.py"
+  },
+  {
+    "source": "tacmap/tacmap_sensor/sharpa_tacmap_link_surface.py",
+    "sha256": "d0f25657c409e614778edab3fc81bb21c94bc477dfe9f475a6ec890e32bd21ce",
+    "destination": "envs/common/sensors/tactile/backends/sharpa_tacmap_link_surface.py"
+  },
+  {
+    "source": "tacmap/tacmap_sensor/sharpa_tacmap_cfg.py",
+    "sha256": "8abd0cdb185aae39f11ae411deec56fab6516f90bfe6bc8363dc9be3c8559332",
+    "destination": "envs/common/sensors/tactile/backends/sharpa_tacmap_cfg.py"
+  },
+  {
+    "source": "tacmap/torch_jit_utils.py",
+    "sha256": "ecee6f3ae22a91e2c85dfb460618cf2581d29fc2d98cac5273eb3e5d75abb7f1",
+    "destination": "envs/common/sensors/tactile/backends/torch_jit_utils.py"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/sim/taxim_jax.py",
+    "sha256": "401bd4614192b6f0dd9bf006dad13e654e2d752ba03f79dae6654eb6a1317621",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/sim/taxim_jax.py"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/sim/LICENSE",
+    "sha256": "a8e3823551e9586dcaa243d33dbb670529bef0b08150d0a6c4d8f6e8134def56",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/sim/LICENSE"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/sim/calibration.py",
+    "sha256": "2616beee50e91993b83c17de68062482a9e2aa46b42ba0d75138a0c40fcdd044",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/sim/calibration.py"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/sim/__init__.py",
+    "sha256": "4bbdf5ad6cc5d34a220a830d08b6953a5bdb165b2ac2d4fae0ca8e9912557512",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/sim/__init__.py"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/sim/taxim_impl.py",
+    "sha256": "3f97133ed9fad9ab469c5e999ed6569be6def069f8fb5e576425d90ecd82a250",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/sim/taxim_impl.py"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/sim/taxim.py",
+    "sha256": "a6c2ac72e870d39aaa322830c1f36842f41188818e34e8fe809f22c65279d218",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/sim/taxim.py"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/sim/taxim_torch.py",
+    "sha256": "4ba159b3d2d21d3d09357737d3057ec8f0a5e8b5a4d6ebdea1832345a8c157ef",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/sim/taxim_torch.py"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/calibs/640x480/params.json",
+    "sha256": "4c3938fbf444a804c904075d7c7a247da5be4193f103bffae3e8347e545d8b0b",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/calibs/640x480/params.json"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/calibs/640x480/dataPack.npz",
+    "sha256": "a728d126e6c6bea277ad2511c459af2f684829143be9d9d9cfce49932a169bc1",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/calibs/640x480/dataPack.npz"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/calibs/640x480/polycalib.npz",
+    "sha256": "596341551a4eb3927b19d14bc1a3fe5e5ff5ac95207b8064c090442e1e294b56",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/calibs/640x480/polycalib.npz"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/calibs/640x480/shadowTable.npz",
+    "sha256": "6816caae94dfc05ab2f6001914e51a30d89ce050dff2e726c2456e0636304e32",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/calibs/640x480/shadowTable.npz"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/calibs/640x480/gelmap.npy",
+    "sha256": "410054cb740feea28d73924eba71f057e709cc801ab800e62d3f80f019f1a31b",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/calibs/640x480/gelmap.npy"
+  },
+  {
+    "source": "integrate/third_party/tacex_gpu_taxim/calibs/640x480/0.png",
+    "sha256": "d8ebecae53a80b98f9aa979f2da6654e15a12467214d56ecc125babaa3b8e30a",
+    "destination": "envs/common/sensors/tactile/backends/third_party/tacex_gpu_taxim/calibs/640x480/0.png"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_indexpip_roll_touch_link_normals.npy",
+    "sha256": "45ba1b4e678e2213d9eed6b133acb0a6d7d5dffe034713cc5f23fe48a601c4d3",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_indexpip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_thumbmcp_roll_touch_link_points.npy",
+    "sha256": "4b33096dadea2ba8ead5e6218959d576522c7809942683ff49c9b093a26aa20a",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_thumbmcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_pinkymcp_roll_touch_link_normals.npy",
+    "sha256": "04d308df48865b9b65c42e235dbfe74b8713554c36dbddd0dff523128a76f17f",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_pinkymcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_midmcp_roll_touch_link_points.npy",
+    "sha256": "429396d2e417237954a14e0ea3207481aea513e5afe3581146c40b35dc3a681a",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_midmcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_thumbpip_roll_touch_link_points.npy",
+    "sha256": "36f5a4019aa75abdc9917c7ff282004847ead08986eac37ba4e54217bff54567",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_thumbpip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_indexmcp_roll_touch_link_points.npy",
+    "sha256": "6f2483daec8242576e170419effea1f4c3b30db0b9a421fefdaa10f36014f90b",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_indexmcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_midmcp_roll_touch_link_normals.npy",
+    "sha256": "ff1ebcc05af8091f9219f60730428e8e3c533892ddba83ab93ac14bd96377dcf",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_midmcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_midpip_roll_touch_link_normals.npy",
+    "sha256": "68cedaa9675d0887a91098ccc3a9c563e089d88da66536ab49209e77ca9b34ab",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_midpip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_indexmcp_roll_touch_link_normals.npy",
+    "sha256": "8c53b08273f5845f0518e5b5823c127aafadde15916a0e2fda657c0b16e55b7a",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_indexmcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_thumbmcp_roll_touch_link_normals.npy",
+    "sha256": "1186c510a9202032cfe80dcdf9a9209e787b63843542f045ca8fddda5bada328",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_thumbmcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_indexpip_roll_touch_link_points.npy",
+    "sha256": "0fec6c4c98132a7004843636ff1b300d0df80a2963a1ab5684232b79e8bd1ac6",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_indexpip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_ringpip_roll_touch_link_normals.npy",
+    "sha256": "d7025210badbe765e07eb27d58fc4b97949a1248ad683020f16392be0b358e6a",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_ringpip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_pinkypip_roll_touch_link_normals.npy",
+    "sha256": "6805d16a7ae177185ff65e23cd986b7e71cebfe31e2ddf02daf75107b2b9ee6d",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_pinkypip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_midpip_roll_touch_link_points.npy",
+    "sha256": "ae1e86d02c8e64be0a14478bda30026dabe7c983e8cd7ac549459c783c5a9a7b",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_midpip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_ringpip_roll_touch_link_points.npy",
+    "sha256": "0fa468f6834b8c4e754bf839e7726dbe242aa7ff1cdbce5f1640126a6bedddbc",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_ringpip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_ringmcp_roll_touch_link_normals.npy",
+    "sha256": "6dabc739423b6e46c1ad2e18c656720912749b79880dcbd0c6036d838c22ca54",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_ringmcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/dv2_pressure_taxel_layout.urdf",
+    "sha256": "cddbd64189bb14584b276e48d5eefcbfbde8229e0b9cd5179050d58c3410bd4f",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/dv2_pressure_taxel_layout.urdf"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_hand_rubber_link_points.npy",
+    "sha256": "50a13bd342b8baaf3335a7728e2d5c294b692c7cee7525896bdbbba3fd27069a",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_hand_rubber_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_pinkymcp_roll_touch_link_points.npy",
+    "sha256": "92a82eaa3c5051d132bdc91ab9677133f29d3f34850f6c3c257b3230442aff09",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_pinkymcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_hand_rubber_link_normals.npy",
+    "sha256": "27d70052ea91fec966f71c81408f657070951fe25cc468a0101deb6e3b6ff9bf",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_hand_rubber_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_hand_rubber_link_radii_m.npy",
+    "sha256": "fce799d653edffdae373227b46fdd7bcc3725c756d0523849a8eeccd9e979fd7",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_hand_rubber_link_radii_m.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_thumbpip_roll_touch_link_normals.npy",
+    "sha256": "c42f1c50909a0535c9ebe23e696c35b6f4e9f8f8da94b2a930369ca186a10935",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_thumbpip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_ringmcp_roll_touch_link_points.npy",
+    "sha256": "ed91bc68ba9a6618ba2ee868e9de9e36d1200f90bc4d737e584e665f616b36cf",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_ringmcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/pressure_taxels/dv2/right_pinkypip_roll_touch_link_points.npy",
+    "sha256": "d78af08aec445078097adaeb9427729ce35dd3854253c1d1b72487438eca74eb",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/pressure_taxels/dv2/right_pinkypip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_right_touch/marker_positions/vitai_4fingers/marker_positions.npz",
+    "sha256": "6d33469580c47d9dc630144c598db9d332fc25021eac4790cf584e0fced6413b",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/marker_positions/vitai_4fingers/marker_positions.npz"
+  },
+  {
+    "source": "assets/revo21_right_touch/marker_positions/vitai_4fingers/metadata.json",
+    "sha256": "01a73aa948499373830a846939ef5b66b62ea6769aa4ca56c31e4e19c4ce06f3",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/marker_positions/vitai_4fingers/metadata.json"
+  },
+  {
+    "source": "assets/revo21_right_touch/marker_positions/vitai_4fingers/camera_ray_rectangles_320x240.json",
+    "sha256": "1b07fe1c4aef1b4e8e9849b82a370c1c5fc5843a40473edfa464afd877e29b34",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/marker_positions/vitai_4fingers/camera_ray_rectangles_320x240.json"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_middip_roll_rubber_point.npy",
+    "sha256": "be239f013c8a0e7895875317f801ffafa8cc61842a12c7d5c884dedc921ef3db",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_middip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_ringdip_roll_rubber_point.npy",
+    "sha256": "4b911b94303e78c588f90678d78c9d2940de814ce07c7bb36e76c1dd33e7ecc7",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_ringdip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_pinkydip_roll_rubber_normal.npy",
+    "sha256": "6fde4be549abaf0edaacac5eab2207aedc133ae5b3aa0e088c7baa213d5d58c9",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_pinkydip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_thumbdip_roll_rubber_point.npy",
+    "sha256": "2a7ac2ab913ca64fcc5308828ed7ac71009518e9b07e459898667c7d2c131661",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_thumbdip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_indexdip_roll_rubber_normal.npy",
+    "sha256": "3d0225aceb2f27eca1377ba8eaa1a8ed08133d2eadae6419d3899e6b9a2d38ca",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_indexdip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_pinkydip_roll_rubber_point.npy",
+    "sha256": "fdbf86818f56e33c752d70a278c67ddcf8d048c84db88ba49489a72570a455d5",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_pinkydip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_indexdip_roll_rubber_point.npy",
+    "sha256": "2899e5b9153e6818b3695fb6d2e1b2715794d7d3488aeaf32aca294516637ee4",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_indexdip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_middip_roll_rubber_normal.npy",
+    "sha256": "0429af0b26e8c1e822f17e755328ea0f8111d1f8f607cc0916111d2ee8f4f4db",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_middip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_ringdip_roll_rubber_normal.npy",
+    "sha256": "a469cde03fe9a65d2c46c8a5adc9ea480fc8df88e873877fb6d13e07fe83ac6d",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_ringdip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2/right_thumbdip_roll_rubber_normal.npy",
+    "sha256": "30266fac620b1277438e455c77de0a50b9523af452cbf2e50b190863bd6e57ea",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/right/surface/right_thumbdip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_hand_rubber_link_radii_m.npy",
+    "sha256": "fce799d653edffdae373227b46fdd7bcc3725c756d0523849a8eeccd9e979fd7",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_hand_rubber_link_radii_m.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_indexpip_roll_touch_link_points.npy",
+    "sha256": "8390f35af8d98d14b6c2c386f41f6899cd863152c077948ebaf5f33fc6276024",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_indexpip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_thumbpip_roll_touch_link_points.npy",
+    "sha256": "dfa7b2a8387f9f1e74323c97b7e42338d8c60a99ed951fcc09090b979eb150bf",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_thumbpip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_hand_rubber_link_normals.npy",
+    "sha256": "98f48f443469438d1a3ac854c3452050672c1262fa3ad66f4166dfe84eea1d1a",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_hand_rubber_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_ringpip_roll_touch_link_points.npy",
+    "sha256": "c33ccb41e6c2418dd5ee76b5d9e92154c01fc755f72cd0b5d8cdb402e38d51d1",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_ringpip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_indexmcp_roll_touch_link_normals.npy",
+    "sha256": "98686c8de5be679a0d5319ff7260f0a4348f7df9849eff9c3f31c3b8537eac6d",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_indexmcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_pinkypip_roll_touch_link_points.npy",
+    "sha256": "180b9362bbb4ea4237e4e7b51b953b2cd0f4a4263443557fde18d3e65461ecb4",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_pinkypip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_ringmcp_roll_touch_link_normals.npy",
+    "sha256": "93c58c1a1dfcdd99023ef7f2ff1a36f0186d3d0e2c45b7d26e94956b2fc39434",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_ringmcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_pinkymcp_roll_touch_link_points.npy",
+    "sha256": "849898f1c3a86eb9b16ad766d9f41114a3b1b6cf55bd0253249bec969dd23896",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_pinkymcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_thumbpip_roll_touch_link_normals.npy",
+    "sha256": "40bfc02093efbfffefc6bbfd9ed6110aef845e96ce2a3dba2a3c73496a0d0426",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_thumbpip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_midmcp_roll_touch_link_points.npy",
+    "sha256": "f47ebda40ca04faf06f2b1b315d5cf04a550e7e7970fcc0593cd56df3025e591",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_midmcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_pinkypip_roll_touch_link_normals.npy",
+    "sha256": "bb53cbdae96fc4d4d4bedfc85d5e8bcccf2f1a62d38cce424297bb574192719b",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_pinkypip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_indexpip_roll_touch_link_normals.npy",
+    "sha256": "e5fba2cbc0fd02318374538c4523c61dad613e36633d8039a671832ed398dd82",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_indexpip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_ringmcp_roll_touch_link_points.npy",
+    "sha256": "e53a49a72303fc185e3f15af3dac3b506dd1eaf49243ba984ba8c8e43610034b",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_ringmcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_indexmcp_roll_touch_link_points.npy",
+    "sha256": "52e406105abaa504d5d545bccdb23194fd0f697989c7bcf9acca9915dbb7be4d",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_indexmcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_midmcp_roll_touch_link_normals.npy",
+    "sha256": "7e8ee56948f3402a3ca55b7c15aedaeb5c6376835d7267293a905ac04fa7d7e4",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_midmcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_thumbmcp_roll_touch_link_points.npy",
+    "sha256": "445ad8bc9e198393f0b39d31298d555d53546e2c056b7a8c633051d0fa2b3b55",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_thumbmcp_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/dv2_pressure_taxel_layout.urdf",
+    "sha256": "9e9bedc94527f378f728d843bf6f91d5e924bd9fc84327e75190ca750c046cf8",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/dv2_pressure_taxel_layout.urdf"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_hand_rubber_link_points.npy",
+    "sha256": "24d05da3c6738e6d005b50d262295ef4e01bcc67f3bdb0b0b87062e043d4476d",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_hand_rubber_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_thumbmcp_roll_touch_link_normals.npy",
+    "sha256": "c960aa40ed5dd38bf01fe3bc4925715bb3f70d6c718b118a52a0eb32c1e9e599",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_thumbmcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_midpip_roll_touch_link_points.npy",
+    "sha256": "a05f353d34ea714011aa0a7f704d38e1d3e762dd854738a6b3061e93dc6cade0",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_midpip_roll_touch_link_points.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_pinkymcp_roll_touch_link_normals.npy",
+    "sha256": "d1c86cf2d79c2b5b54e0e290791e7630f9df58b3b7d31338ddaf153d7f9de335",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_pinkymcp_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_ringpip_roll_touch_link_normals.npy",
+    "sha256": "dc0401233eb52234f50945ddea073677847582b78a6c12cb89f66203b476f86c",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_ringpip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/pressure_taxels/dv2/left_midpip_roll_touch_link_normals.npy",
+    "sha256": "3c272503d2d4fecb31f8d2c40e4f1c600af36da043d203b5074e1933e5ac662a",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/pressure_taxels/dv2/left_midpip_roll_touch_link_normals.npy"
+  },
+  {
+    "source": "assets/revo21_left_touch/marker_positions/vitai_4fingers/marker_positions.npz",
+    "sha256": "c4b5dc118342830c4d5d23812f94ef7aec595e58d4930515d7f16fe300f083fd",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/marker_positions/vitai_4fingers/marker_positions.npz"
+  },
+  {
+    "source": "assets/revo21_left_touch/marker_positions/vitai_4fingers/camera_ray_rectangles_320x240.json",
+    "sha256": "71da64634e0ebc7c601505e13906441c56173e94e5ea94b32bd741d58a7943c1",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/marker_positions/vitai_4fingers/camera_ray_rectangles_320x240.json"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_indexdip_roll_rubber_normal.npy",
+    "sha256": "b8265592d1dc380fbe9cad72fb10924abeb471c70d05722f55f6135f98b39563",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_indexdip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_pinkydip_roll_rubber_point.npy",
+    "sha256": "7490a7948db1eaabe93fe703f14644205bc3fe8e9e1f348d981f819a55823632",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_pinkydip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_ringdip_roll_rubber_point.npy",
+    "sha256": "90a9d14e6d10cd0e6b40a72760a84b0947e1a446caa5f96cbe57ac92d7fcbf17",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_ringdip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_ringdip_roll_rubber_normal.npy",
+    "sha256": "d6e8e92aa9405f975715458f7803a7ffd3a651e9f06215e8ae91b650e04d7a5a",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_ringdip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_thumbdip_roll_rubber_point.npy",
+    "sha256": "bd403fa3406f11c7d2027ac0e1f8c2183a789288e116c5b2f5542e8fb3394b42",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_thumbdip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_indexdip_roll_rubber_point.npy",
+    "sha256": "25c394515d6d021aa2dbacfe2e861e4f0c5e28b91f7748dde54c5d0f876f2a1f",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_indexdip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_middip_roll_rubber_point.npy",
+    "sha256": "0624665c4088160e9e2fb0173125a61971256f766dbc12d10e9f7c4317d295b7",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_middip_roll_rubber_point.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_thumbdip_roll_rubber_normal.npy",
+    "sha256": "f8d6f6889eceec83caf1eaee7ee73b26f40b842c3925a62c19e038ea810514e3",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_thumbdip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_pinkydip_roll_rubber_normal.npy",
+    "sha256": "0a4c8dc0473989794c98d285d1c6ac75d88a791457cdbf3ab8e504a73f560e69",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_pinkydip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "tacmap/assets/tactilesensor_map/revo21_dv2_left/left_middip_roll_rubber_normal.npy",
+    "sha256": "2b43eff589a73cbbaf86a6f216b47d8d20bd93abd64d5ecaa2eed721d003cdb6",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/left/surface/left_middip_roll_rubber_normal.npy"
+  },
+  {
+    "source": "vitai_4Fingers-320*240/marker_annotations/reference_median.png",
+    "sha256": "0ce06a8a5b2141b5eb04aabe296d35f2c0cac2338d3ae63791f6450f8e8fc29d",
+    "destination": "assets/robots/revotron/tactile_hands/sensors/reference_median.png"
+  }
+]

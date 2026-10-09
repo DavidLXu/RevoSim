@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "side": "left",
+      "region": "mcp",
+      "pressure_peak": 0.36923325061798096,
+      "depth_peak_m": 0.0,
+      "tip_wrench_abs_max": 0.0
+    },
+    {
+      "side": "right",
+      "region": "mcp",
+      "pressure_peak": 0.369188129901886,
+      "depth_peak_m": 0.0,
+      "tip_wrench_abs_max": 0.0
+    },
+    {
+      "side": "left",
+      "region": "tip",
+      "pressure_peak": 0.0,
+      "depth_peak_m": 0.0012202197685837746,
+      "tip_wrench_abs_max": 0.12242697179317474
+    },
+    {
+      "side": "right",
+      "region": "tip",
+      "pressure_peak": 0.0,
+      "depth_peak_m": 0.0010632993653416634,
+      "tip_wrench_abs_max": 0.14247718453407288
+    }
+  ]
+}

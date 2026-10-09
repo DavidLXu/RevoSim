@@ -1,0 +1,11 @@
+#usda 1.0
+(
+    defaultPrim = "Revo3"
+    metersPerUnit = 1
+    subLayers = [
+        @hide_taxels.usda@,
+        @geometry.usdc@
+    ]
+    upAxis = "Z"
+)
+

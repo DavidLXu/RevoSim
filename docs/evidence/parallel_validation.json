@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "covered_regions": 32,
+  "video": {
+    "width": 2560,
+    "height": 1600,
+    "r_frame_rate": "60/1",
+    "duration": "18.950000",
+    "nb_read_frames": "1137"
+  },
+  "checks": [
+    "finite telemetry",
+    "60 Hz sampling",
+    "all ten fingertip modalities",
+    "all pressure regions",
+    "all three objects moving",
+    "all three objects produce optical contact",
+    "no wrench without pad contact",
+    "released sensors return to zero",
+    "full video decode"
+  ]
+}

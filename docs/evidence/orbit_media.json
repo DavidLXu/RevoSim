@@ -1,0 +1,42 @@
+{
+  "video": {
+    "resolution": [
+      1600,
+      1000
+    ],
+    "fps": 60,
+    "frames": 720,
+    "duration_s": 12,
+    "full_decode_passed": true
+  },
+  "gif": {
+    "resolution": [
+      640,
+      400
+    ],
+    "frames": 360,
+    "duration_ms": 12000,
+    "loop": 0,
+    "full_decode_passed": true,
+    "palette": "256 colors per frame",
+    "compression": "gifsicle -O3 --lossy=60",
+    "fps": 30
+  },
+  "unit_tests_passed": 7,
+  "files": {
+    "docs/videos/revosim-orbit-60fps.mp4": {
+      "bytes": 5835988,
+      "sha256": "6b04af1eccda40e3cd400701a5328e41dd1f54bd14e2327784f78900d3dbd734"
+    },
+    "docs/images/revosim-orbit.gif": {
+      "bytes": 13571268,
+      "sha256": "e89a4eaa2a7809a3771c3f6a4a66352dffead496ed64042c5648dd9db9a2e204"
+    }
+  },
+  "playback_speed": 1.0,
+  "source_duration_s": 12,
+  "motion_speed": 1.5,
+  "reference_motion_duration_s": 18,
+  "post_render_retiming": false,
+  "self_collision": false
+}

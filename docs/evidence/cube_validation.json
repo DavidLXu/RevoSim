@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "full_finger_coverage": true,
+  "shape": "cube",
+  "frames": 2731,
+  "fps": 60,
+  "hops": {
+    "left": {
+      "fitted_free_flight_acceleration_m_s2": [
+        7.710346098562677e-06,
+        1.356118612584018e-15,
+        -9.809996888831561
+      ],
+      "destination_palm_peak": 0.45587384700775146
+    },
+    "right": {
+      "fitted_free_flight_acceleration_m_s2": [
+        7.804129627270427e-06,
+        1.1754029837406775e-16,
+        -9.80999999708581
+      ],
+      "destination_palm_peak": 0.10132481157779694
+    }
+  },
+  "checks": [
+    "complete sequence",
+    "both hands",
+    "each optical modality",
+    "all requested pressure regions",
+    "finite raw data",
+    "array shapes",
+    "uniform sampling",
+    "bounded physical trajectory",
+    "ballistic flight and both palm landings",
+    "sensor coordinates",
+    "full video decode and frame synchronization",
+    "release to zero"
+  ]
+}
