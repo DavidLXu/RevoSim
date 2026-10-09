@@ -1,4 +1,10 @@
-# RevoSim
+<h1 align="center">RevoSim: Scalable Multimodal Tactile Simulation for Dexterous Manipulation</h1>
+
+<p align="center">
+  <a href="https://davidlxu.github.io/RevoSim-web/">项目网站</a> ·
+  <strong>中文</strong> ·
+  <a href="README_EN.md">English</a>
+</p>
 
 RevoSim 面向 sim-to-real，将视觉外观、关节运动学、动力学与多模态触觉集成在同一双手模型中。环绕手指舞展示原始材质的光泽、色彩，以及动力学驱动的逐指波浪、快速手势切换和比耶侧摆；下方接触演示展示各触觉区域的响应。
 
@@ -183,3 +189,17 @@ tests/           通道契约、坐标配准、六维合力及独立性测试
 `marker=True` 可以保留：marker 通道仍使用原标定和原交点规则，这个开关只改变深度胶面参考。设为 `outer_surface_reference=False` 可对比旧方法。此移植没有修改局部窗口插值、极端擦边交点步进或双环境差异问题。
 
 回归命令：`PYTHONPATH=src python -m pytest tests -q`。单元测试验证交点选择和配置路由；完整动态仿真仍需兼容的 Isaac Sim 环境。
+
+## 引用
+
+如需引用本项目，可使用以下 BibTeX：
+
+```bibtex
+@misc{zhang2026revosim,
+  title = {{RevoSim}: Scalable Multimodal Tactile Simulation for Dexterous Manipulation},
+  author = {Zhang, Ke and Xu, Lixin and Wang, Ziyi and Tan, Jie and Li, Chuanyu and Xu, Renjing},
+  year = {2026},
+  howpublished = {Project website and source code},
+  url = {https://davidlxu.github.io/RevoSim-web/}
+}
+```
