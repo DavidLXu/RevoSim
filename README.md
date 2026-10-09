@@ -20,7 +20,7 @@ RevoSim 面向 sim-to-real，将视觉外观、关节运动学、动力学与多
 
 ## 环境
 
-目标环境是 **Linux、Python 3.11、Isaac Sim 5.1.0、Isaac Lab v2.3.2、CUDA PyTorch 2.7.0**。需要 Isaac Sim 支持的 NVIDIA RTX GPU 和驱动。运行验证使用 Ubuntu 24.04 / RTX 5090 32 GB；Mac 仅用于编辑代码和查看结果，不运行仿真。
+目标环境是 **Linux、Python 3.11、Isaac Sim 5.1.0、Isaac Lab v2.3.2、CUDA PyTorch 2.7.0**。需要 Isaac Sim 支持的 NVIDIA RTX GPU 和驱动。运行验证使用 Ubuntu 24.04 / RTX 5090 32 GB。
 
 使用独立环境，避免修改已有的 Isaac Lab 环境：
 
