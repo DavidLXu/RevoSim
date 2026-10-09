@@ -1,14 +1,6 @@
 <h1 align="center">RevoSim: Scalable Multimodal Tactile Simulation for Dexterous Manipulation</h1>
 
 <p align="center">
-  Ke Zhang · Lixin Xu · Ziyi Wang · Xiyue Dong · Jie Tan · Chuanyu Li · Renjing Xu
-</p>
-
-<p align="center">
-  HKUST(GZ) · BrainCo · Georgia Tech
-</p>
-
-<p align="center">
   <a href="https://davidlxu.github.io/RevoSim-web/">项目网站</a> ·
   <strong>中文</strong> ·
   <a href="README_EN.md">English</a>
