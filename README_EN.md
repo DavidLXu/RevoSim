@@ -6,7 +6,7 @@
   <strong>English</strong>
 </p>
 
-RevoSim integrates visual appearance, joint kinematics, dynamics, and multimodal tactile sensing in a single two-hand model for sim-to-real work. The orbiting finger-dance showcase highlights the original materials' gloss and color, along with dynamics-driven finger waves, rapid gesture transitions, and lateral V-sign movements. The contact demo below shows responses across the tactile regions.
+RevoSim integrates visual appearance, joint kinematics, dynamics, and multimodal tactile sensing in a single two-hand model for real-to-sim-to-real workflows. The orbiting finger-dance showcase highlights the original materials' gloss and color, along with dynamics-driven finger waves, rapid gesture transitions, and lateral V-sign movements. The contact demo below shows responses across the tactile regions.
 
 <p align="center">
   <a href="docs/videos/revosim-orbit-60fps.mp4">

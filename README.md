@@ -6,7 +6,7 @@
   <a href="README_EN.md">English</a>
 </p>
 
-RevoSim 面向 sim-to-real，将视觉外观、关节运动学、动力学与多模态触觉集成在同一双手模型中。环绕手指舞展示原始材质的光泽、色彩，以及动力学驱动的逐指波浪、快速手势切换和比耶侧摆；下方接触演示展示各触觉区域的响应。
+RevoSim 面向 real-to-sim-to-real，将视觉外观、关节运动学、动力学与多模态触觉集成在同一双手模型中。环绕手指舞展示原始材质的光泽、色彩，以及动力学驱动的逐指波浪、快速手势切换和比耶侧摆；下方接触演示展示各触觉区域的响应。
 
 <p align="center">
   <a href="docs/videos/revosim-orbit-60fps.mp4">
