@@ -104,6 +104,7 @@ def build_hand(cfg, side):
                         data_types=['distance_along_normal', 'distance_along_normal_raw'],
                         max_distance=0.05, image_height=rows, image_width=cols,
                         ray_layout_npz=str(layout), ray_layout_prefix=prefix,
+                        surface_reference_mode=('outer_forward' if cfg.outer_surface_reference and kind == 'surface' and group == 'tacmap' else 'legacy'),
                         ray_hit_index=1 if kind == 'object' else 2,
                         use_ray_hit_index_layout=kind == 'surface', use_first_hit_fallback=kind == 'surface',
                         debug_viz_rays=False, **{k: v for k, v in params.items() if k != 'max_distance'})

@@ -175,3 +175,11 @@ tests/           通道契约、坐标配准、六维合力及独立性测试
 ```
 
 第三方许可和文件声明详见 `THIRD_PARTY_NOTICES.md` 及各资源目录。
+
+## 胶面参考与内部黑点修复
+
+`TactileSensorCfg.outer_surface_reference` 默认是 `True`。深度通道沿射线选择最外侧朝外的胶面交点，替代固定取第二个交点，避免内部薄结构导致参考距离错误。胶面参考在初始化时计算并缓存；运行时物体仍使用最近交点，不会每帧重新遍历胶面。
+
+`marker=True` 可以保留：marker 通道仍使用原标定和原交点规则，这个开关只改变深度胶面参考。设为 `outer_surface_reference=False` 可对比旧方法。此移植没有修改局部窗口插值、极端擦边交点步进或双环境差异问题。
+
+回归命令：`PYTHONPATH=src python -m pytest tests -q`。单元测试验证交点选择和配置路由；完整动态仿真仍需兼容的 Isaac Sim 环境。

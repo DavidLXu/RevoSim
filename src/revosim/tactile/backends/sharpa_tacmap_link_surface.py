@@ -18,6 +18,7 @@ from pxr import Gf, Sdf, Usd, UsdGeom, Vt
 import omni.usd as omni_usd
 
 from .sharpa_tacmap_cfg import SharpaTacmapCfg
+from .outer_surface import raycast_outer_surface_forward
 from .torch_jit_utils import deform_quantize
 
 
@@ -108,6 +109,7 @@ class SharpaTacmapLinkSurfaceCfg(SharpaTacmapCfg):
     ray_backoff_m: float = 0.012
     ray_hit_index: int = 1
     use_ray_hit_index_layout: bool = False
+    surface_reference_mode: str = "legacy"
     second_hit_epsilon: float = 1.0e-5
     use_first_hit_fallback: bool = False
     debug_viz_link_surfaces: bool = False
@@ -125,6 +127,15 @@ class SharpaTacmapLinkSurface(MultiMeshRayCaster):
     UNSUPPORTED_TYPES: ClassVar[set[str]] = set()
 
     def __init__(self, cfg: SharpaTacmapLinkSurfaceCfg):
+        if cfg.surface_reference_mode not in ("legacy", "outer_forward"):
+            raise ValueError("Unknown surface_reference_mode")
+        if cfg.surface_reference_mode == "outer_forward" and cfg.update_mesh_ids:
+            raise ValueError("Experimental outer reference does not export mesh IDs")
+        if cfg.surface_reference_mode == "outer_forward":
+            if len(cfg.mesh_prim_paths) != 1 or cfg.mesh_prim_paths[0].prim_expr != cfg.prim_path:
+                raise ValueError("Outer reference requires only the attached rubber link as target")
+            if tuple(cfg.offset.pos) != (0.0, 0.0, 0.0) or tuple(cfg.offset.rot) != (1.0, 0.0, 0.0, 0.0) or cfg.offset.convention != "world":
+                raise ValueError("Outer reference requires an identity link-frame offset")
         for name in cfg.data_types:
             if name not in ["distance_along_normal", "distance_along_normal_raw"]:
                 raise ValueError(f"Unsupported data type: {name}")
@@ -348,6 +359,8 @@ class SharpaTacmapLinkSurface(MultiMeshRayCaster):
         first_normals = _normalize_hit_normals(ray_normal, first_valid)
         ray_hit_index = max(1, int(getattr(self.cfg, "ray_hit_index", 1)))
         ray_hit_indices = self._ray_hit_indices_att
+        if self.cfg.surface_reference_mode == "outer_forward":
+            ray_hit_index, ray_hit_indices = 1, None
         self.first_ray_hits_w[env_ids] = torch.where(first_valid.unsqueeze(-1), first_hits, torch.zeros_like(first_hits))
         self.first_ray_normals_w[env_ids] = first_normals
         self.first_ray_hit_valid[env_ids] = first_valid
@@ -497,6 +510,22 @@ class SharpaTacmapLinkSurface(MultiMeshRayCaster):
             raise ValueError(f"SharpaTacmapLinkSurface only supports ray_hit_index 1 or 2, got {ray_hit_index}")
         else:
             self.ray_hits_w[env_ids] = torch.where(first_valid.unsqueeze(-1), first_hits, torch.zeros_like(first_hits))
+
+        if self.cfg.surface_reference_mode == "outer_forward":
+            # Reference geometry is static in the attached link frame. Avoid
+            # world-space rounding when stepping past very thin structures.
+            local_positions = torch.zeros_like(self._mesh_positions_w[env_ids])
+            local_orientations = torch.zeros_like(self._mesh_orientations_w[env_ids])
+            local_orientations[..., 0] = 1.0
+            outer_hits, ray_depth, outer_normals, selected_valid = raycast_outer_surface_forward(
+                self.ray_starts_att[env_ids], self.ray_directions_att[env_ids],
+                mesh_ids_wp=self._mesh_ids_wp, max_dist=float(self.cfg.max_distance),
+                mesh_positions_w=local_positions, mesh_orientations_w=local_orientations,
+            )
+            quats = self._data.quat_w[env_ids].repeat(1, self.num_rays)
+            world_hits = math_utils.quat_apply(quats, outer_hits) + self._data.pos_w[env_ids].unsqueeze(1)
+            self.ray_hits_w[env_ids] = torch.where(selected_valid.unsqueeze(-1), world_hits, torch.zeros_like(world_hits))
+            selected_normals = math_utils.quat_apply(quats, outer_normals)
 
         self.ray_normals_w[env_ids] = selected_normals
         self.ray_hit_valid[env_ids] = selected_valid

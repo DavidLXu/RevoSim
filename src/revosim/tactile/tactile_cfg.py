@@ -22,6 +22,7 @@ class TactileSensorCfg(SensorBaseCfg):
     hands: tuple[str, ...] = ('left', 'right')
     pressure: bool = True
     depth: bool = True
+    outer_surface_reference: bool = True  # cached outer exit; markers retain their calibration
     marker: bool = True
     rgb: bool = True
     asset_root: str = str(ASSET_ROOT)

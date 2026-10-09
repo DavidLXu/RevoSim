@@ -52,6 +52,7 @@ from isaaclab.utils.warp import raycast_dynamic_meshes
 
 
 from .utils import sample_object_point_cloud
+from .outer_surface import raycast_outer_surface_forward, SURFACE_REFERENCE_VERSION
 
 
 RL_FINGER_ORDER = ("middle", "index", "ring", "pinky", "thumb")
@@ -651,6 +652,8 @@ def _tacmap_fixed_surface_reference(
         int(rows),
         int(cols),
         str(env.device),
+        SURFACE_REFERENCE_VERSION,
+        getattr(surface_sensor.cfg, "surface_reference_mode", "legacy"),
     )
     cached = cache.get(key)
     if cached is not None and (not require_geometry or bool(cached.get("has_geometry", False))):
@@ -996,6 +999,8 @@ def _initialize_local_tacmap_reference(
         int(reference_cols),
         float(max_distance_m),
         str(env.device),
+        SURFACE_REFERENCE_VERSION,
+        tuple(getattr(env.scene.sensors[n].cfg, "surface_reference_mode", "legacy") for n in tacmap_surface_sensor_names),
     )
     cached = getattr(env, "_rl_local_tacmap_reference_state", None)
     if isinstance(cached, dict) and cached.get("key") == key:
@@ -1054,58 +1059,70 @@ def _initialize_local_tacmap_reference(
                 flat_starts_l,
                 flat_directions_l,
             )
-            _, first_depth, _, _, _ = raycast_dynamic_meshes(
-                starts_w,
-                directions_w,
-                mesh_ids_wp=surface_sensor._mesh_ids_wp,
-                max_dist=float(max_distance_m),
-                mesh_positions_w=surface_sensor._mesh_positions_w[:1],
-                mesh_orientations_w=surface_sensor._mesh_orientations_w[:1],
-                return_distance=True,
-                return_normal=False,
-                return_mesh_id=False,
-            )
-            if first_depth is None:
-                raise RuntimeError(f"Adaptive TacMap first surface scan failed for finger {finger!r}")
-            first_valid = (
-                torch.isfinite(first_depth)
-                & (first_depth > 0.0)
-                & (first_depth <= float(max_distance_m))
-            )
-            first_clean = torch.where(first_valid, first_depth, torch.zeros_like(first_depth))
-            epsilon_m = max(0.0, float(getattr(surface_sensor.cfg, "second_hit_epsilon", 1.0e-5)))
-            second_starts_w = starts_w + directions_w * (first_clean + epsilon_m).unsqueeze(-1)
-            _, second_depth, _, _, _ = raycast_dynamic_meshes(
-                second_starts_w,
-                directions_w,
-                mesh_ids_wp=surface_sensor._mesh_ids_wp,
-                max_dist=float(max_distance_m),
-                mesh_positions_w=surface_sensor._mesh_positions_w[:1],
-                mesh_orientations_w=surface_sensor._mesh_orientations_w[:1],
-                return_distance=True,
-                return_normal=False,
-                return_mesh_id=False,
-            )
-            if second_depth is None:
-                raise RuntimeError(f"Adaptive TacMap second surface scan failed for finger {finger!r}")
-            second_total = first_clean + epsilon_m + torch.nan_to_num(
-                second_depth,
-                nan=0.0,
-                posinf=0.0,
-                neginf=0.0,
-            )
-            second_valid = (
-                first_valid
-                & torch.isfinite(second_depth)
-                & (second_depth > 0.0)
-                & (second_total <= float(max_distance_m))
-            )
-            selected_valid = first_valid | second_valid
-            selected_depth = torch.where(second_valid, second_total, first_clean)[0].reshape(
-                reference_rows,
-                reference_cols,
-            )
-            selected_valid = selected_valid[0].reshape(reference_rows, reference_cols)
+            if getattr(surface_sensor.cfg, "surface_reference_mode", "legacy") == "outer_forward":
+                local_positions = torch.zeros_like(surface_sensor._mesh_positions_w[:1])
+                local_orientations = torch.zeros_like(surface_sensor._mesh_orientations_w[:1])
+                local_orientations[..., 0] = 1.0
+                _, selected_depth, _, selected_valid = raycast_outer_surface_forward(
+                    flat_starts_l, flat_directions_l, mesh_ids_wp=surface_sensor._mesh_ids_wp,
+                    max_dist=float(max_distance_m),
+                    mesh_positions_w=local_positions, mesh_orientations_w=local_orientations,
+                )
+                selected_depth = torch.where(selected_valid, selected_depth, torch.zeros_like(selected_depth))[0].reshape(reference_rows, reference_cols)
+                selected_valid = selected_valid[0].reshape(reference_rows, reference_cols)
+            else:
+                _, first_depth, _, _, _ = raycast_dynamic_meshes(
+                    starts_w,
+                    directions_w,
+                    mesh_ids_wp=surface_sensor._mesh_ids_wp,
+                    max_dist=float(max_distance_m),
+                    mesh_positions_w=surface_sensor._mesh_positions_w[:1],
+                    mesh_orientations_w=surface_sensor._mesh_orientations_w[:1],
+                    return_distance=True,
+                    return_normal=False,
+                    return_mesh_id=False,
+                )
+                if first_depth is None:
+                    raise RuntimeError(f"Adaptive TacMap first surface scan failed for finger {finger!r}")
+                first_valid = (
+                    torch.isfinite(first_depth)
+                    & (first_depth > 0.0)
+                    & (first_depth <= float(max_distance_m))
+                )
+                first_clean = torch.where(first_valid, first_depth, torch.zeros_like(first_depth))
+                epsilon_m = max(0.0, float(getattr(surface_sensor.cfg, "second_hit_epsilon", 1.0e-5)))
+                second_starts_w = starts_w + directions_w * (first_clean + epsilon_m).unsqueeze(-1)
+                _, second_depth, _, _, _ = raycast_dynamic_meshes(
+                    second_starts_w,
+                    directions_w,
+                    mesh_ids_wp=surface_sensor._mesh_ids_wp,
+                    max_dist=float(max_distance_m),
+                    mesh_positions_w=surface_sensor._mesh_positions_w[:1],
+                    mesh_orientations_w=surface_sensor._mesh_orientations_w[:1],
+                    return_distance=True,
+                    return_normal=False,
+                    return_mesh_id=False,
+                )
+                if second_depth is None:
+                    raise RuntimeError(f"Adaptive TacMap second surface scan failed for finger {finger!r}")
+                second_total = first_clean + epsilon_m + torch.nan_to_num(
+                    second_depth,
+                    nan=0.0,
+                    posinf=0.0,
+                    neginf=0.0,
+                )
+                second_valid = (
+                    first_valid
+                    & torch.isfinite(second_depth)
+                    & (second_depth > 0.0)
+                    & (second_total <= float(max_distance_m))
+                )
+                selected_valid = first_valid | second_valid
+                selected_depth = torch.where(second_valid, second_total, first_clean)[0].reshape(
+                    reference_rows,
+                    reference_cols,
+                )
+                selected_valid = selected_valid[0].reshape(reference_rows, reference_cols)
 
             origin_l = torch.as_tensor(camera_origin_l, device=env.device, dtype=torch.float32)
             rotation_l = torch.as_tensor(camera_rotation_l, device=env.device, dtype=torch.float32)
