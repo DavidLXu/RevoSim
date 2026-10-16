@@ -1,5 +1,7 @@
 <h1 align="center">RevoSim: Scalable Multimodal Tactile Simulation for Dexterous Manipulation</h1>
 
+> **Maintenance status:** This repository is no longer maintained. Please visit the official repository at [BrainCoTech/RevoSim](https://github.com/BrainCoTech/RevoSim) for the latest version.
+
 <p align="center">
   <a href="https://davidlxu.github.io/RevoSim-web/">Project Website</a> ·
   <a href="README.md">中文</a> ·
